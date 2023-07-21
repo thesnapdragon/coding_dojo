@@ -1,0 +1,19 @@
+@startuml
+
+left to right direction
+
+Nurse --> (Worker login)
+Nurse --> (Join chat)
+Nurse --> (Access medical records)
+Nurse --> (Register medical record)
+Nurse --> (Get help from expert system)
+Nurse --> (Create diagnosis)
+Nurse --> (Create prescription)
+Nurse --> (Make a call)
+
+Patient --> (Customer login)
+Patient --> (Start chat)
+Patient --> (Download diagnosis)
+Patient --> (Download prescription)
+
+@enduml

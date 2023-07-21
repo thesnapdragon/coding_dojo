@@ -1,0 +1,27 @@
+@startuml
+
+top to bottom direction
+
+component "AM.I.SICK" as application {
+  component UI as ui
+  component Backend as backend
+  component "Expert System" as expert_system
+
+  database Database as database
+  database Storage as storage
+  queue Queue as queue
+}
+
+component "Authentication Service" as authentication_service
+component "Call Service" as call_service
+
+application -- authentication_service
+application -- call_service
+
+backend -- ui
+backend -- expert_system
+backend -- database
+backend -- storage
+backend -- queue
+
+@enduml

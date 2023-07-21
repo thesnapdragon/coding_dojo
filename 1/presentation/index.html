@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/beige.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="#3D5A80">
+					<h2 class="r-fit-text">Coding Dojo</h2>
+				</section>
+
+				<section data-background="#3D5A80">
+					<h3>Agenda</h3>
+					<ol>
+						<li>Introduction to Coding Dojo</li>
+						<li>Introduction to the Exercise</li>
+						<li>Coding (30 min)</li>
+						<li>Summary / Exchange / Learnings (20 min)</li>
+					</ol>
+				</section>
+				
+				<section data-background="#55917F">
+					<h3>Introduction - Coding Dojo</h3>
+
+					<blockquote>Joint practice of techniques and methods, development languages, platforms, frameworks and tools of software development.</blockquote>
+
+					<ul>
+						<li>Non-competitive, collaborative, fun environment</li>
+						<li>All skill levels are welcome</li>
+						<li>Safe to try new ideas</li>
+					</ul>
+				</section>
+
+				<section data-background="#55917F">
+					<h3>Introduction - Code Kata</h3>
+
+					<blockquote>Software development exercise, in which the focus is not on solving a task or problem, but on learning new skills and developing routines.</blockquote>
+
+					<ul>
+						<li>Any language, method can be used</li>
+						<li>There is no good or bad solution</li>
+					</ul>
+				</section>
+				
+				<section data-background="#55917F">
+					<h3>Kata: Bloom Filter</h3>
+
+					<a href="https://llimllib.github.io/bloomfilter-tutorial/">Bloom Filters by Example</a>
+				</section>
+				
+				<section data-background="#EE6C4D">
+					<h3>Let's start coding!</h3>
+
+					<div align="left">
+						<h4>Advices:</h4>
+
+						<ul>
+							<li>Write tests</li>
+							<li>Try to implement the solution with the Red - Green - Refactor approach</li>
+						</ul>
+					</div>
+				</section>
+
+				<section data-background="#EE6C4D">
+					<h3>Hints</h3>
+
+					<ul>
+    					<li>Use list as initial internal data structure.</li>
+					
+    					<li>Use md5 as initial hash function to compose a function that maps the input to a number that is smaller than the size of the internal filter.</li>
+					
+    					<li>Hash the input first once, then try to compose a hash function that is independent and provides different values for different seed values.</li>
+					
+    					<li><b>Advanced</b> Use bitarray as internal data structure, to reduce memory usage.</li>
+					
+    					<li><b>Advanced</b> Use murmur hash as hash function, to increase speed.</li>
+    				</ul>
+				</section>
+
+				<section data-background="#EE6C4D">
+					<h3 class="r-fit-text">THE END</h3>
+					<p><b>Created by</b> Milán Unicsovics</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

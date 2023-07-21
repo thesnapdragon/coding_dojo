@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/beige.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="#3D5A80">
+					<h2 class="r-fit-text">Coding Dojo</h2>
+				</section>
+
+				<section data-background="#3D5A80">
+					<h3>Agenda</h3>
+					<ol>
+						<li>Introduction to the Exercise</li>
+						<li>Designing</li>
+						<li>Summary / Exchange / Learnings</li>
+					</ol>
+				</section>
+				
+				<section data-background="#55917F">
+					<h3>Kata: Am.I.Sck</h3>
+
+					<div style="font-size:medium; text-align: left;">
+					Your company wants to build a software system supporting chat nurses (advice nurse) answering questions from customers about potential health problems.
+					<ul>
+					<li><b>Users:</b> 250+ nurses worldwide, hundreds to thousands of customers</li>
+					<li><b>Requirements:</b></li>
+						<ul>
+							<li>access patient medical histories</li>
+							<li>provide an service-level agreement on turnaround time for interaction</li>
+							<li>assist nurses in providing medical diagnosis</li>
+							<li>support nurses geographically divergent from clients</li>
+							<li>enable client customers to reach local medical staff (if necessary), contacting the local medical staff directly ahead of time (if necessary)</li>
+							<li>eventually enable parts of the system for direct client customer use</li>
+						</ul>
+					<li><b>Additional Context:</b></li>
+						<ul>
+							<li>company is building software solutions in niche spaces like this one</li>
+							<li>agressive growth with 2nd round VC funding</li>
+							<li>fast time to market is overall company goal to capture market</li>
+							<li>our lawyers have determined that the conversation is not considered a medical record</li>
+						</ul>
+					</div>
+				</section>
+				
+				<section data-background="#EE6C4D">
+					<h3>Hints</h3>
+
+					<div align="left">
+						<ul>
+							<li>Use UML / <a href="https://c4model.com/">C4</a> to document your architecture</li>
+							<li>Basic approach:</li>
+							<ol>
+								<li>Figure out users and their roles and list functional requirements</li>
+								<li>Find out the system's subdomains according to DDD</li>
+								<li>Design core components to satisfy functional and non functional requirements</li>
+								<li>Choose technologies for the implementation</li>
+							</ol>
+						</ul>
+					</div>
+				</section>
+
+				<section data-background="#EE6C4D">
+					<h3 class="r-fit-text">THE END</h3>
+					<p><b>Created by</b> Milán Unicsovics</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

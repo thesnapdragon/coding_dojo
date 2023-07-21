@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/beige.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="#3D5A80">
+					<h2 class="r-fit-text">Coding Dojo</h2>
+				</section>
+
+				<section data-background="#3D5A80">
+					<h3>Agenda</h3>
+					<ol>
+						<li>Introduction to the Exercise</li>
+						<li>Coding</li>
+						<li>Summary / Exchange / Learnings</li>
+					</ol>
+				</section>
+				
+				<section data-background="#55917F">
+					<h3>Kata: Trip Service</h3>
+
+					<pre><code data-trim data-noescape data-line-numbers>
+						def get_trips_by_user(user):
+						    trip_list = []
+						    logged_user = UserSession.get_logged_user()
+						    is_friend = False
+						    if logged_user is not None:
+						        for friend in user.get_friends():
+						            if friend == logged_user:
+						                is_friend = True
+						                break
+						        if is_friend:
+						            trip_list = TripDAO.find_trips_by_user(user)
+						        return trip_list
+						    else:
+						        raise UserNotLoggedInException()
+					</code></pre>
+				</section>
+
+				<section data-background="#55917F">
+					<h3>Kata: Trip Service</h3>
+
+					<a href="https://gist.github.com/thesnapdragon/19891a97a8a5c4d66dfe361e63c72e58">Get the Code</a>
+				</section>
+				
+				<section data-background="#EE6C4D">
+					<h3>Let's start coding!</h3>
+
+					<div align="left">
+						<h4>Rules:</h4>
+
+						<ul>
+							<li>We can not change any existing code if not covered by tests</li>
+							<li>Testing of collaborators should be avoided</li>
+						</ul>
+					</div>
+				</section>
+
+				<section data-background="#EE6C4D">
+					<h3 class="r-fit-text">THE END</h3>
+					<p><b>Created by</b> Milán Unicsovics</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

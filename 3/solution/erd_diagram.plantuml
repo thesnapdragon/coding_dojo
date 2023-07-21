@@ -1,0 +1,48 @@
+@startuml
+
+skinparam linetype ortho
+
+entity "users" {
+  name
+  address
+  health_insurance_number
+}
+
+entity "nurses" {
+  name
+  faculty
+}
+
+entity "cases" {
+  faculty
+}
+
+entity "messages" {
+  text
+}
+
+entity "medical_records" {
+  title
+  description
+  symptoms
+}
+
+entity "diagnosises" {
+  title
+  description
+  treatments
+}
+
+entity "prescriptions" {
+  title
+  users_manual
+}
+
+users --{ cases
+cases }-- nurses
+cases --{ messages
+users --{ medical_records
+medical_records -- diagnosises
+cases --{ prescriptions
+
+@enduml
